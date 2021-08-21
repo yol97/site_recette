@@ -10,9 +10,8 @@ body {
 
 div.contenu {
     background-color: white;
-    margin: 60px 10% 80px 10%;  /* haut droite bas gauche */
-    padding: 0px 30px 30px 30px;
-    min-width: 350px;
+    margin: 40px 8px 40px 8px;  /* haut droite bas gauche */
+    padding: 0px 8px 20px 8px;
     box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
     overflow: visible;
 }
@@ -74,17 +73,17 @@ table.info {
     width: 100%;
     color: white;
     background-color: #6c829dc0;
-    height: 80px;              
+    height: 50px;              
 }
 
 table.info td {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     vertical-align: top;
 }
 
 table.info th {
-    font-size: 16px;
+    font-size: 14px;
     vertical-align: bottom;
     padding-bottom: 8px;
 }
@@ -98,7 +97,7 @@ img.info {
 }
 
 div.colonne {
-    width: 45%;
+    width: 100%;         /* largeur d'une colonne INGREDIENTS ou PREPA */
     margin-top: 20px;
 }
 
@@ -110,26 +109,11 @@ div.colonne h2 {
     padding-bottom: 5px;
 }
 
-/* div.colonne1, div.colonne2 {
-    width: 50%;
-} */
-
 div.colonne1 {
     display: inline-block;
-    margin-right: 10%
 }
 
-/* div.colonne1 p {
-    text-align: center;
-    border: 1px solid black;
-    padding-top: 5px;/
-} */
-
-div.colonne2 {
-    float: right;
-}
-
-div.ingredients p{
+div.ingredients p {
     text-align: center;
     font-size: 14px;
     border: 1px solid lightgrey;
@@ -167,3 +151,44 @@ table.preparation tr {
     height: 40px;
 }
 
+/* Styles pour ordinateur */ 
+@media only screen and (min-width: 768px) {
+    div.contenu {
+        margin: 60px 10% 80px 10%;  /* haut droite bas gauche */
+        padding: 0px 30px 30px 30px;
+        min-width: 350px;
+    }
+    table.info {
+        height: 80px;              
+    }
+
+    table.info td {
+        font-size: 14px;
+    }
+
+    table.info th {
+        font-size: 16px;
+    }
+
+    div.colonne {
+        width: 45%;         /* largeur d'une colonne INGREDIENTS ou PREPA */
+    }
+    
+    div.colonne1 {
+        margin-right: 10%
+    }
+    
+    div.colonne2 {
+        float: right;      /* place la colonne à droite */
+    }
+}
+
+/* Styles pour des grands écrans on bloque limage étirée 
+mais on ajoute des marges blanches à gauches et à droite */ 
+@media only screen and (min-width: 768px) {
+    div.contenu {
+        margin-left: auto;  /* bandes auto gauche droite */
+        margin-right: auto;
+        width: 645px;
+    }
+}
